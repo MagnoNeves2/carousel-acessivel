@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Trazer o css do body depois para centrealizar */
+
+/* items-wrapper */
+section {
+  width: 100vw;
+}
+
+/* items */
+ul {
+  display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  z-index: 1;
+}
+
+/* item */
+li {
+  flex: none;
+	scroll-snap-align: start;
+  pointer-events: none;
+}
+
+
+.card-box {
+  width: 272px;
+  height: 140px;
+  /* background-color: tomato; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 176px;
+  height: 140px;
+  padding: 0 48px;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 10px;
+  cursor: pointer;
+  border-bottom: 4px solid orange;
+}
+
+.card > img {
+  width: 48px;
+  height: 48px;
+}
+
+.card > p {
+  width: 76px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
