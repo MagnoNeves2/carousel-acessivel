@@ -22,7 +22,7 @@ cardSelected = (title) => {
     const cardTitle = card.textContent.trim();
 
     if (cardTitle === title) {
-      console.log(`Posição do card: ${i}`);
+      console.log(`Posição do card: ${i + 1}`);
     }
   }
 };
