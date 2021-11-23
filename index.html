@@ -8,59 +8,98 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <section>
-      <ul>
+    <header>
+        <span class="banner">[BANNER]</span>
+        <input type="text" placeholder="pesquisar">
+    </header>
+    <section class="products-section">
+      <ul class="products-list">
         <li class="card-box">
-            <button class="card" onclick="linkar()">
-                <img src="./house-icon.png" alt="Icone de uma casa"></img>
-                <p>seguro residencial</p>
-            </button>
+            <a class="card" onclick="linkar(event)" href="#doubt-title">
+                <img src="./assets/house-icon.png" alt="Ícone de uma casa"></img>
+                <p class="title">seguro residencial</p>
+            </a>
         </li>
         <li class="card-box">
-            <button class="card" onclick="linkar()">
-                <img src="./house-icon.png" alt="Icone de uma casa"></img>
-                <p>seguro residencial</p>
-            </button>
+            <a class="card" onclick="linkar(event)" href="#doubt-title">
+                <img src="./assets/car-icon.png" alt="Ícone de um carro"></img>
+                <p class="title">seguro automóvel</p>
+            </a>
         </li>
         <li class="card-box">
-            <button class="card" onclick="linkar()">
-                <img src="./house-icon.png" alt="Icone de uma casa"></img>
-                <p>seguro residencial</p>
-            </button>
+            <a class="card" onclick="linkar(event)" href="#doubt-title">
+                <img src="./assets/cell-icon.png" alt="Ícone de um celular"></img>
+                <p class="title">seguro celular</p>
+            </a>
         </li>
         <li class="card-box">
-            <button class="card" onclick="linkar()">
-                <img src="./house-icon.png" alt="Icone de uma casa"></img>
-                <p>seguro residencial</p>
-            </button>
+            <a class="card" onclick="linkar(event)" href="#doubt-title">
+                <img src="./assets/people-icon.png" alt="Ícone de uma pessoa"></img>
+                <p class="title">seguro vida em grupo</p>
+            </a>
         </li>
         <li class="card-box">
-            <button class="card" onclick="linkar()">
-                <img src="./house-icon.png" alt="Icone de uma casa"></img>
-                <p>seguro residencial</p>
-            </button>
-        </li>
-        <li class="card-box">
-            <button class="card" onclick="linkar()">
-                <img src="./house-icon.png" alt="Icone de uma casa"></img>
-                <p>seguro residencial</p>
-            </button>
-        </li>
-        <li class="card-box">
-            <button class="card" onclick="linkar()">
-                <img src="./house-icon.png" alt="Icone de uma casa"></img>
-                <p>seguro residencial</p>
-            </button>
-        </li>
-        <li class="card-box">
-            <button class="card" onclick="linkar()">
-                <img src="./house-icon.png" alt="Icone de uma casa"></img>
-                <p>seguro residencial</p>
-            </button>
+            <a class="card" onclick="linkar(event)" href="#doubt-title">
+                <img src="./assets/store-icon.png" alt="Ícone de uma loja"></img>
+                <p class="title">seguro comércio</p>
+            </a>
         </li>
       </ul>
     </section>
 
-    <script src="index.js"></script>
+    <h3 class="doubt" id="doubt-title">Dúvidas Gerais</h3>
+
+    <section class="questions">
+        <article>
+            <ul class="questions-list">
+                <li>Pergunta 1</li>
+                <li>Pergunta 2</li>
+                <li>Pergunta 3</li>
+            </ul>
+        </article>
+        <article>
+            <ul class="questions-list">
+                <li>Pergunta 1</li>
+                <li>Pergunta 2</li>
+                <li>Pergunta 3</li>
+            </ul>
+        </article>
+        <article>
+            <ul class="questions-list">
+                <li>Pergunta 1</li>
+                <li>Pergunta 2</li>
+                <li>Pergunta 3</li>
+            </ul>
+        </article>
+        <article>
+            <ul class="questions-list">
+                <li>Pergunta 1</li>
+                <li>Pergunta 2</li>
+                <li>Pergunta 3</li>
+            </ul>
+        </article>
+    </section>
+
+    <footer>
+        <section>
+            <ul class="infos-list">
+                <li>Info 1</li>
+                <li>Info 2</li>
+                <li>Info 3</li>
+                <li>Info 4</li>
+            </ul>
+        </section>
+        <section>
+            <ul class="infos-list">
+                <li>Info 5</li>
+                <li>Info 6</li>
+                <li>Info 7</li>
+                <li>Info 8</li>
+            </ul>
+        </section>
+        <span class="icone">[ÍCONE]</span>
+    </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>

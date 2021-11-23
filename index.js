@@ -6,6 +6,8 @@ document.querySelector("ul").addEventListener("wheel", (event) => {
 	}
 });
 
-linkar = () => {
-  console.log("Funcionando!");
+linkar = (event) => {
+const title = event.target.innerText;
+document.querySelector(".doubt").textContent = `Dúvidas em ${title}`;
+console.log(title);
 };
