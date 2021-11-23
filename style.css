@@ -56,13 +56,13 @@ footer {
 
 /* items-wrapper */
 .products-section {
-  width: 100vw;
+  max-width: 100vw;
 }
 
 /* items */
 .products-list {
   display: flex;
-	overflow-x: auto;
+	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
@@ -70,16 +70,17 @@ footer {
 
 /* item */
 .card-box {
-  width: 272px;
-  height: 140px;
+  /* width: 272px; */
+  /* height: 140px; */
   /* background-color: tomato; */
   text-align: center;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  flex: none;
+  align-items: center; */
+  /* flex: none; */
 	scroll-snap-align: start;
   /* pointer-events: none; */
+  padding: 4px 0 4px 24px;
 }
 
 .card {
