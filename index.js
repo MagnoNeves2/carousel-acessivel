@@ -1,4 +1,4 @@
-document.querySelector("ol").addEventListener("wheel", (event) => {
+document.querySelector("ul").addEventListener("wheel", (event) => {
   if (event.deltaY < 0) {
     event.target.scrollBy(200, 0);
   } else {

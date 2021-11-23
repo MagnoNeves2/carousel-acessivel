@@ -43,6 +43,10 @@ footer {
   background-color: rgb(8, 11, 59);
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 .banner {
   font-size: 50px;
   width: 100%;
