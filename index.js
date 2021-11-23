@@ -10,4 +10,6 @@ linkar = (event) => {
 const title = event.target.innerText;
 document.querySelector(".doubt").textContent = `Dúvidas em ${title}`;
 console.log(title);
+
+window.location.href = "#doubt-title";
 };
