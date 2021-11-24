@@ -100,3 +100,7 @@ createBullets = () => {
     document.querySelector(".scrollball").append(button);
   }
 };
+
+for (let i = 0; i < 1; i++) {
+  createBullets();
+}
