@@ -8,24 +8,33 @@ document.querySelector("ul").addEventListener("wheel", (event) => {
   }
 });
 
-document.querySelector("ul").addEventListener("mouseenter", () => {
+document.body.addEventListener("touchmove", () => {
   const list = document.querySelector("ul").children;
 
   for (let i = 0; i < list.length; i++) {
     console.log();
     list[i].ariaLabel = `card ${i + 1} de ${list.length} cards`;
   }
+
+  // ? Lógica para habilitar as bolinhas com condicional de tamanho de tela mobile ou tablet
 });
 
-// console.log(document.querySelector(".products-section").clientWidth);
-// console.log(document.querySelector(".products-list"));
-// console.log(document.querySelector(".card-box").clientWidth * 5);
+document.body.addEventListener("mousemove", () => {
+  const list = document.querySelector("ul").children;
+
+  for (let i = 0; i < list.length; i++) {
+    console.log();
+    list[i].ariaLabel = `card ${i + 1} de ${list.length} cards`;
+  }
+
+  // ? Lógica para habilitar as bolinhas com condicional da variação de tamanho das telas
+});
 
 const bulletAmount =
   Math.floor(
-    (document.querySelector(".card-box").clientWidth * 5) /
+    (document.querySelector(".card-box").clientWidth * 6) /
       document.querySelector(".products-section").clientWidth
-  ) + 1;
+  ) + 0.5;
 
 link = (event) => {
   const title = event.target.innerText;
@@ -40,24 +49,38 @@ cardSelected = (event) => {
   event.target.ariaSelected = "true";
 };
 
+activedBall = () => {
+  // ?: daria para pegar a referencia do botão (event) através do click?
+  document.querySelector(".scrollball").addEventListener("click", (event) => {
+    const idButton = event.target.id;
+    const button = document.getElementById(`${idButton}`);
+
+    if (document.querySelectorAll(".ball_active").length > 0) {
+      document.querySelectorAll(".ball_active").forEach((btn) => {
+        btn.classList.remove(["ball_active"]);
+        btn.classList.add(["ball"]);
+      });
+
+      button.classList.add(["ball_active"]);
+    } else {
+      button.classList.remove(["ball"]);
+      button.classList.add(["ball_active"]);
+    }
+  });
+};
+
 let selectedBullet = 0;
 let scrollTotal = 0;
 
 scrollCarousel = (bullet) => {
   if (bullet != selectedBullet) {
     let scrollTarget = 0;
+    const diffBullet = bullet - selectedBullet;
 
-    // if (bullet > selectedBullet) {
-      const diffBullet = bullet - selectedBullet;
-      scrollTarget =
-        document.querySelector(".products-section").clientWidth * diffBullet;
-    // }
+    activedBall();
 
-    // if (bullet < selectedBullet) {
-    //   const diffBullet = bullet - selectedBullet;
-    //   scrollTarget =
-    //     document.querySelector(".products-section").clientWidth * diffBullet;
-    // }
+    scrollTarget =
+      document.querySelector(".products-section").clientWidth * diffBullet;
 
     document.querySelector(".products-list").scrollBy(scrollTarget, 0);
 
@@ -69,9 +92,11 @@ scrollCarousel = (bullet) => {
 createBullets = () => {
   for (let i = 0; i < bulletAmount; i++) {
     const button = document.createElement("button");
-    button.innerHTML = "bolinha " + (i + 1);
+    // button.innerHTML = "bolinha " + (i + 1);
+    button.setAttribute("id", `ball_${i + 1}`);
+    button.classList.add(["ball"]);
     button.onclick = () => scrollCarousel(i);
 
-    document.querySelector("#products-section").append(button);
+    document.querySelector(".scrollball").append(button);
   }
 };
