@@ -96,6 +96,6 @@ for (let i = 0; i < 1; i++) {
 
   for (let i = 0; i < list.length; i++) {
     console.log();
-    list[i].ariaLabel = `card ${i + 1} de ${list.length} cards`;
+    list[i].setAttribute('aria-label', `card ${i + 1} de ${list.length} cards`)
   }
 }
