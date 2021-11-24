@@ -8,17 +8,6 @@ document.querySelector("ul").addEventListener("wheel", (event) => {
   }
 });
 
-document.body.addEventListener("touchmove", () => {
-  const list = document.querySelector("ul").children;
-
-  for (let i = 0; i < list.length; i++) {
-    console.log();
-    list[i].ariaLabel = `card ${i + 1} de ${list.length} cards`;
-  }
-
-  // ? Lógica para habilitar as bolinhas com condicional de tamanho de tela mobile ou tablet
-});
-
 document.body.addEventListener("mousemove", () => {
   const list = document.querySelector("ul").children;
 
@@ -103,4 +92,10 @@ createBullets = () => {
 
 for (let i = 0; i < 1; i++) {
   createBullets();
+  const list = document.querySelector("ul").children;
+
+  for (let i = 0; i < list.length; i++) {
+    console.log();
+    list[i].ariaLabel = `card ${i + 1} de ${list.length} cards`;
+  }
 }
