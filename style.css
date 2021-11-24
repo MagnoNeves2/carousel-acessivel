@@ -74,10 +74,10 @@ footer {
   /* height: 140px; */
   /* background-color: tomato; */
   text-align: center;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  /* flex: none; */
+  align-items: center;
+  flex: none;
 	scroll-snap-align: start;
   /* pointer-events: none; */
   padding: 4px 0 4px 24px;
