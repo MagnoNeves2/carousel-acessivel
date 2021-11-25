@@ -70,11 +70,11 @@ document.body.addEventListener("mousemove", () => {
 
 const bulletAmount =
   navigator.userAgent.match(/webOS/i) && document.body.clientWidth >= 1440
-    ? Math.floor(
+    ? Math.round(
         (document.querySelector(".card-box").clientWidth * 6) /
           document.querySelector(".products-section").clientWidth
       ) + 2
-    : Math.floor(
+    : Math.round(
         (document.querySelector(".card-box").clientWidth * 6) /
           document.querySelector(".products-section").clientWidth
       ) + 1;
@@ -160,7 +160,7 @@ scrollAdvance = () => {
       .lastElementChild.classList.contains(["ball_active"])
   ) {
     document.querySelector(".advance-arrow").setAttribute("hidden", "true");
-    document.querySelector(".back-arrow").removeAttribute('hidden');
+    document.querySelector(".back-arrow").removeAttribute("hidden");
   }
 };
 
@@ -189,7 +189,13 @@ for (let i = 0; i < 1; i++) {
     list[i].setAttribute("aria-label", `card ${i + 1} de ${list.length} cards`);
   }
 
-  if (document.querySelectorAll(".ball").length === 1) {
+  if (
+    document.querySelectorAll(".ball").length === 1 ||
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i)
+  ) {
     document.querySelector(".advance-arrow").setAttribute("hidden", "true");
     document.querySelector(".back-arrow").setAttribute("hidden", "true");
   } else if (document.querySelectorAll(".ball").length > 1) {
