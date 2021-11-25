@@ -13,6 +13,11 @@
         <input type="text" placeholder="pesquisar">
     </header>
     <section class="products-section" id="products-section">
+        <section class="box-back-arrow" aria-hidden="true">
+          <button class="back-arrow" onclick="scrollBack()">
+              <img src="./assets/arrow-icon.png" alt="Seta para avançar o carousel de cards">
+          </button>
+      </section>
       <ul class="products-list" aria-labelledby="products-section">
         <li class="card-box">
             <button class="card" onclick="link(event)">
@@ -51,6 +56,11 @@
             </button>
         </li>
       </ul>
+      <section class="box-advance-arrow" aria-hidden="true">
+          <button class="advance-arrow" onclick="scrollAdvance()">
+              <img src="./assets/arrow-icon.png" alt="Seta para avançar o carousel de cards">
+          </button>
+      </section>
     </section>
 
     <section class="scrollball" aria-hidden="true">
